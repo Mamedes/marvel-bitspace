@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/card';
+.hero {
+    min-width: 200px;
+    max-width: 575px;
+  
+    @include media-breakpoint-up(sm) {
+ 
+      margin-bottom: 2 * $card-deck-margin !important;
+    }
+  }
+  

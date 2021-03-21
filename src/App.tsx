@@ -1,28 +1,13 @@
 import React from "react";
+import Routes from './routes';
 import "./App.css";
-import HeroCard from './components/card/HeroCard';
-import Header from "./components/header/Header";
+
 
 function App() {
   return (
-    <>
-      <Header />
+  <Routes />
 
-      <div className="scrollWrapper">
-        <div className="cardArea">
-          <div className="cardAreaColumn">
-            <HeroCard />
-          </div>
-          <div className="cardAreaColumn">
-            <HeroCard />
-            </div>
-          <div className="cardAreaColumn">
-            <HeroCard />
-            </div>
-        </div>
-      </div>
-    </>
-  );
+  ); 
 }
 
 export default App;
