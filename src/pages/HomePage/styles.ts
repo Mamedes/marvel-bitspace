@@ -19,6 +19,7 @@ export const ButtonProxima = styled.button`
   font-weight: bold;  
   text-decoration:none;
   padding: 0.25em 1em; 
+  margin: 10px;
   font-size: 16px;
   background: #AF1F24 0% 0% no-repeat padding-box;
   border-radius: 0px 3px 3px 0px;
@@ -39,6 +40,7 @@ export const ButtonAnterior = styled.button`
   font-weight: bold;  
   text-decoration:none;
   padding: 0.25em 1em; 
+
   font-size: 16px;
   background: #AF1F24 0% 0% no-repeat padding-box;
   border-radius: 0px 3px 3px 0px;

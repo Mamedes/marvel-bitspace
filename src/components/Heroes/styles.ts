@@ -34,6 +34,7 @@ export const HeroCard = styled.div`
     cursor: pointer;
     display: flex;
     border: 1px groove rgba(175, 31, 36, 0.4);
+    border-radius:10px;
     width: 100%;
     flex-direction: column;
     
