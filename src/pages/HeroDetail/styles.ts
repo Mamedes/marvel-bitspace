@@ -6,24 +6,27 @@ display: flex;
 align-items: center;
 justify-content: center;
 `;
+
 export const Section = styled.section`
-display: center;
+display: block;
 align-items: center;
 justify-content: center;
+padding-top:20px;
+padding-left: 150px;
+padding-bottom:50px;
 p {
-
-  color: #ff9000;
-  display: flex;
-  align-items: center;
-  width: 300px;
-
-}
-h3 {
- 
   color: #ff9000;
   display: flex;
   align-items: center;
   width: 400px;
+
+}
+h3 { 
+  color: #ff9000;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  padding-top:10px;
 
 }
 h6 { 
@@ -33,18 +36,24 @@ h6 {
   width: 400px;
 
 }
+li {      
+  position:relative;   
+  padding:4px 8px;   
+  list-style:none;     
+  border-top:2px solid rgba(175, 31, 36, 0.4);      
+  background: rgba(255,144,0,0.05);  
+}  
 `;
-
-
 
 export const HeroImg = styled.div`
 margin-bottom: 32px;
 position: relative;
 width: 186px;
 align-self: center;
-img {
+img { 
   width: 250px;
   height: 250px;
   border-radius: 50%;
+
 }
 `;

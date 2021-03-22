@@ -29,11 +29,11 @@ function renderHero(character: api.Character) {
       </HeroImg>
       <h3>{character.name}</h3>
       <p>{character.description}</p>
-      <h6>HQ Marvel Comics</h6>
+      <h3>HQ Marvel Comics</h3>
       {renderCategory(character, 'comics')}
-      <h6>Series</h6>
+      <h3>Series</h3>
       {renderCategory(character, 'series')}
-      <h6>Stories</h6>
+      <h3>Histórias</h3>
       {renderCategory(character, 'stories')}
       </Section>
     </Container>
