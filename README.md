@@ -4,6 +4,16 @@
 https://marvel-bitspace.vercel.app/ <sup>[1]</sup>
 
 
+# Requisitos
+✅  Implementar paginação para listar os personagens;
+✅  Styled-Components;
+✅  Construir uma interface amigável e visualmente agradável;
+✅  O projeto deve ser documentado;
+✅  Utilizar variáveis de ambiente;
+✅  TypeScript;
+❌  NextJS;
+✅  Página para exibir mais informações sobre cada quadrinho, exibindo os demais personagens que estiveram presentes nele;
+✅  Hospedar a aplicação na Vercel ou em algum outro host;
 
 # Getting Started with Create React App
 
