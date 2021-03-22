@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Heroes } from '../../components/heroes/Heroes';
-import Header from "../../components/header/Header";
+import { Heroes } from '../../components/Heroes';
+import Header from "../../components/header";
+import './styles.ts'
 
 export function HomePage() {
   const { page: tmp } = useParams<{ page: string }>();
