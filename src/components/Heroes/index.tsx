@@ -1,22 +1,34 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as api from '../../api/api';
+import {
+  Container,
+  CardArea,
+  CardAreaColumn,
+  HeroCard,
+  HeroCardWrapper,
+  HeroNome,
+  HeroImage,
+  CardFooter,
+  CardButton
+} from './styles'
+import dotenv from 'dotenv';
 
-import { config } from '../../config';
-import {Container, CardArea, CardAreaColumn, HeroCard, HeroCardWrapper, HeroNome, HeroImage, CardFooter,CardButton}from './styles'
+dotenv.config();
+const ITEMS_PAGE = process.env.REACT_APP_ITEMS_PAGE;
 
 function renderHeroes(characters: api.Characters) {
   return (
-    <Container>  
-           <CardArea>
-            {characters.map(character => (
-           
-              <CardAreaColumn>
-              <HeroCard >
+    <Container>
+      <CardArea>
+        {characters.map(character => (
+
+          <CardAreaColumn>
+            <HeroCard >
               <HeroCardWrapper key={character.id}>
                 <HeroImage>
                   <img
-                    src={`${character.thumbnail.path+"/portrait_fantastic"}.${character.thumbnail.extension}`}
+                    src={`${character.thumbnail.path + "/portrait_fantastic"}.${character.thumbnail.extension}`}
                     alt={character.name}
                     className="heroImage"
                     style={{
@@ -29,21 +41,21 @@ function renderHeroes(characters: api.Characters) {
                   <h5>{character.name}</h5>
                 </HeroNome>
                 <CardFooter>
-                  <CardButton as={Link}  to={`/heroes/${character.id}`}>
+                  <CardButton as={Link} to={`/heroes/${character.id}`}>
                     Mais detalhes
                   {/* <Link to={`/heroes/${character.id}`}>
                     <span>Mais detalhe</span></Link> */}
                   </CardButton>
-                 
+
                 </CardFooter>
               </HeroCardWrapper>
-              </HeroCard>
-              </CardAreaColumn>
-       
-            ))}
-          </CardArea>
-      </Container>
-   
+            </HeroCard>
+          </CardAreaColumn>
+
+        ))}
+      </CardArea>
+    </Container>
+
   );
 }
 
@@ -62,7 +74,7 @@ export function Heroes(props: Props) {
 
       setCharacters(undefined);
       try {
-        const _characters = await api.fetchCharacters(_page * config.nbCharactersPerPage);
+        const _characters = await api.fetchCharacters(_page * Number(ITEMS_PAGE));
         setCharacters(_characters);
       } catch (e) {
         console.log(e);
