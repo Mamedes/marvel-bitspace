@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { shade } from 'polished'
+import { shade } from "polished";
 
 export const Container = styled.div`
     margin-left: auto;
@@ -25,15 +25,15 @@ export const CardAreaColumn = styled.div`
     align-items: center;
     position: relative;
   }
-`;  
+`;
 export const HeroCard = styled.div`
-display: center;
-align-items: center;
-justify-content: center;
+    display: center;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
     display: flex;
-    border-radius:  6px;
+    border: 1px groove rgba(175, 31, 36, 0.4);
     width: 100%;
     flex-direction: column;
     
@@ -44,24 +44,23 @@ export const HeroCardWrapper = styled.section`
     align-items: center;
     
   }
-`;    
+`;
 export const HeroNome = styled.div`
     text-transform: uppercase;
     font-weight: bold;
     font-size: 16px;
   }
-`;  
+`;
 export const HeroImage = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img{    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
     width: 168px;
     height: 256px;
     border-radius: 10px;
-    
   }
-`;  
+`;
 
 export const CardFooter = styled.div`
   display:flex;
@@ -69,27 +68,23 @@ export const CardFooter = styled.div`
   padding: .75rem 1.25rem;  
     
   }
-`; 
+`;
 
 export const CardButton = styled.button`
   background: white;
-  color:#FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
-  font-weight: bold;  
-  text-decoration:none;
-  padding: 0.25em 1em; 
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.25em 1em;
   font-size: 16px;
-  background: #AF1F24 0% 0% no-repeat padding-box;
+  background: #af1f24 0% 0% no-repeat padding-box;
   border-radius: 0px 3px 3px 0px;
   text-align: center;
   letter-spacing: 0px;
   transition: background-color 0.2s;
 
   &:hover {
-    background: ${shade(0.2, '#AF1F24')};
+    background: ${shade(0.2, "#AF1F24")};
   }
-
-`; 
-
-
-  
+`;
