@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as api from '../../api/api';
-import { useErrorBoundary } from '../../utils/useErrorBoundary';
+
 import { config } from '../../config';
 import {Container, CardArea, CardAreaColumn, HeroCard, HeroCardWrapper, HeroNome, HeroImage, CardFooter,CardButton}from './styles'
 
@@ -52,7 +52,7 @@ interface Props {
 }
 
 export function Heroes(props: Props) {
-  const errorBoundary = useErrorBoundary();
+
 
   const [characters, setCharacters] = useState<api.Characters>();
   const { page } = props;
@@ -65,12 +65,12 @@ export function Heroes(props: Props) {
         const _characters = await api.fetchCharacters(_page * config.nbCharactersPerPage);
         setCharacters(_characters);
       } catch (e) {
-        errorBoundary(e);
+        console.log(e);
       }
     }
 
     fetch(page);
-  }, [page, errorBoundary]);
+  }, [page]);
 
   if (characters === undefined) {
     return <p>Aguarde Carregando...</p>;

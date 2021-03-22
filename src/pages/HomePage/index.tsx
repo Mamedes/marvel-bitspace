@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Heroes } from '../../components/Heroes';
 import Header from "../../components/header";
-import './styles.ts'
+import {ButtonProxima, ButtonAnterior, Container} from './styles'
 
 export function HomePage() {
   const { page: tmp } = useParams<{ page: string }>();
@@ -22,14 +22,19 @@ export function HomePage() {
 
   return (
     <>
-    <Header/>      
-      <Link to={`/${page - 1}`} className={prevButtonClasses}>
-        &laquo; Previous
-      </Link>{' '}
-      <Link to={`/${page + 1}`} className="btn btn-primary">
-        Next &raquo;
-      </Link>
+    <Header/>
+     
       <Heroes page={page} />
+      <Container>    
+      <ButtonAnterior as={Link} to={`/${page - 1}`} className={prevButtonClasses}>
+        &laquo; Anterior
+      </ButtonAnterior>{' '}
+     
+      <ButtonProxima as={Link} to={`/${page + 1}`} className="btn btn-primary">
+        Próxima Página &raquo;
+      </ButtonProxima>
+      </Container>
+      
     </>
   );
 }
