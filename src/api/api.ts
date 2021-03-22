@@ -1,8 +1,13 @@
 import md5 from 'blueimp-md5';
+import dotenv from 'dotenv';
 
-const API_PUBLIC = '64ac6a623922a82cd3b446816a6445ae';
-const API_PRIVATE = '8c5e1834586e9261b33c996b1336c847f806b694';
-const BASE_URL = 'https://gateway.marvel.com';
+dotenv.config();
+
+const API_PUBLIC = process.env.REACT_APP_API_PUBLIC;
+const API_PRIVATE = process.env.REACT_APP_API_PRIVATE!;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+const ITEMS_PAGE = 48;
+
 
 export interface CharacterCategory {
   available: number;
@@ -55,7 +60,7 @@ export function getQueryParams(offset?: number) {
     ts,
     apikey: API_PUBLIC,
     hash: md5(ts + API_PRIVATE + API_PUBLIC),
-    limit: 50,
+    limit: ITEMS_PAGE,
     offset
   };
  
